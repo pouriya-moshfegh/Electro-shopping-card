@@ -2,69 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===================== */
+@layer components {
+  .header-nav__title {
+    @apply text-white/90 font-semibold text-[15px] hover:text-red-700 duration-200;
+  } /* flex items */
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-col__end {
+    @apply h-full w-full flex flex-col justify-end md:items-start space-y-4 lg:space-y-7;
+  }
+  /* img */
 
-/* //////// */
-@layer components{
-.header-nav__title{
-@apply text-white/90 font-semibold text-[15px] hover:text-red-700 duration-200
-
+  .img-style {
+    @apply min-w-[70%]  bg-slate-200 shadow-2xl md:min-w-full  mx-auto hover:scale-105 duration-200;
+  }
+  /* filter */
+  .dark-filter {
+    @apply hover:backdrop-brightness-50 h-full w-full p-6 duration-300;
+  }
+  .skewbg{
+    @apply skew-x-[-20deg]  h-full w-[80%] md:w-[100%] lg:w-[80%] relative right-14 md:right-14 px-10 md:px-4 py-3;
+  }
+  /* btn */
+  .btnShop{
+    @apply text-lg font-semibold bg-white/90 rounded-2xl py-1 px-4 hover:bg-white/70 hover:text-red-700 duration-200 absolute right-0  text-red-700/80 ;
+  }
+  /* typography */
+  .title {
+    @apply text-white text-2xl md:text-3xl lg:text-4xl md:w-1/2;
+  }
 }
-    .menu-line{
-        @apply block h-[3px] w-8  bg-gray-200 m-[5px] rounded-lg group-hover:animate-pulse duration-200;
-    }
-
-    /* ======================= */
-
-    /* responsive nav */
-
-    /* ======================= */
-
-
-    /* flex items */
-    .flex-center{
-        @apply flex justify-center items-center ;
-    }
-    .flex-col__end{
-        @apply h-full w-full flex flex-col justify-end md:items-start space-y-4 lg:space-y-7;
-        
-    }
-    /* btn */
-    .btn-sm{
-        @apply text-stone-900 font-semibold text-center py-[1px] px-3  w-fit;
-    }
-
-
-    .iconStyle{
-    @apply text-white text-2xl hover:translate-y-[-2px] duration-200 ;
-    }
-    /* filter */
-    .dark-filter{
-        @apply hover:backdrop-brightness-50 h-full w-full p-6 duration-300
-    }
-    /* typography */
-    .title{
-        @apply text-white text-2xl md:text-3xl lg:text-4xl md:w-1/2 ;
-    }
+*{
+    box-sizing:border-box;
 }
-.nav-item:after{
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    background-color: rgb(220 38 38);
-    -webkit-transition: 0.4s all;
-    transition: 0.2s all ease-in-out;
+.nav-item:after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(220 38 38);
+  -webkit-transition: 0.4s all;
+  transition: 0.2s all ease-in-out;
 }
-.nav-item:hover:after{
-
-    width: 100%;
-
+.nav-item:hover:after {
+  width: 100%;
 }
-
+.collection__p1 {
+  background:linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.4) 100%), url("./../../public/image/Collection/headphone.png");
+}
+.collection__p2 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.4) 100%),url("./../../public/image/Collection/camera2.png");
+}
+.collection__p3 {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.4) 100%),url("./../../public/image/Collection/laptop.png");
+}
+.collection__p1,.collection__p2,.collection__p3{
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+ 
+}
+.skewbg{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,.4) 27%, rgba(0,0,0,.5) 27%, rgba(0,0,0,0) 100%);
+}
 
 
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
