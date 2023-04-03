@@ -5,7 +5,7 @@ export default function Nav() {
     <nav >
         {/* normal nav */}
       <ul
-        className="px-8 py-4
+        className="sm:px-10 py-4
         hidden md:flex
     border-t-[3px]
     border-t-red-600 border-b  space-x-6 font-semibold text-black"

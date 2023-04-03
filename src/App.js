@@ -2,6 +2,7 @@
 import Header from "./Header/Header"
 import Nav from "./Nav/Nav";
 import Collection from "./Collection/Collection";
+import Slider from "./Slider/Slider"
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 <Header></Header>
 <Nav></Nav>
 <Collection></Collection>
+<Slider title="New Products"></Slider>
     </>
   );
 }

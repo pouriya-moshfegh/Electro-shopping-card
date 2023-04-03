@@ -22,20 +22,32 @@
   .dark-filter {
     @apply hover:backdrop-brightness-50 h-full w-full p-6 duration-300;
   }
-  .skewbg{
+  .skewbg {
     @apply skew-x-[-20deg]  h-full w-[80%] md:w-[100%] lg:w-[80%] relative right-14 md:right-14 px-10 md:px-4 py-3;
   }
   /* btn */
-  .btnShop{
-    @apply text-lg font-semibold bg-white/90 rounded-2xl py-1 px-4 hover:bg-white/70 hover:text-red-700 duration-200 absolute right-0  text-red-700/80 ;
+  .btnShop {
+    @apply text-lg font-semibold bg-white/90 rounded-2xl py-1 px-4 hover:bg-white/70 hover:text-red-700 duration-200 absolute right-0  text-red-700/80;
   }
   /* typography */
   .title {
     @apply text-white text-2xl md:text-3xl lg:text-4xl md:w-1/2;
   }
+  /* icons */
+  .icon-detail {
+    @apply absolute bg-slate-900/90 top-[-50px] w-24 left-[-34px] opacity-0 group-hover:opacity-100 group-hover:top-[-43px] duration-300 rounded-xl text-white text-[14px] py-[5px] px-[1px];
+  }
+  .icon-hover {
+    @apply  inline-block p-1 duration-100 rounded-full  hover:text-red-600 hover:bg-black/20;
+  }
 }
-*{
-    box-sizing:border-box;
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 80%;
+  }
+}
+* {
+  box-sizing: border-box;
 }
 .nav-item:after {
   content: "";
@@ -50,27 +62,47 @@
   width: 100%;
 }
 .collection__p1 {
-  background:linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.4) 100%), url("./../../public/image/Collection/headphone.png");
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url("./../../public/image/Collection/headphone.png");
 }
 .collection__p2 {
-  background-image: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.4) 100%),url("./../../public/image/Collection/camera2.png");
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url("./../../public/image/Collection/camera2.png");
 }
 .collection__p3 {
-  background-image: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0.4) 100%),url("./../../public/image/Collection/laptop.png");
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url("./../../public/image/Collection/laptop.png");
 }
-.collection__p1,.collection__p2,.collection__p3{
+.collection__p1,
+.collection__p2,
+.collection__p3 {
   position: relative;
   background-size: cover;
   background-position: center;
   overflow: hidden;
- 
 }
-.skewbg{
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,.4) 27%, rgba(0,0,0,.5) 27%, rgba(0,0,0,0) 100%);
+.skewbg {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.4) 27%,
+    rgba(0, 0, 0, 0.5) 27%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
-
-
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,

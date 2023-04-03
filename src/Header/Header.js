@@ -18,9 +18,9 @@ export default class Header extends Component {
   render() {
     return (
       <>
-        <header className="bg-[#15161D] pb-4">
+        <header className="bg-[#15161D] pb-4 ">
           {/* ==============    header nav   ================ */}
-          <div className="flex justify-between bg-white/10  py-2 px-8 ">
+          <div className="flex justify-between bg-white/10 px-4  py-2 sm:px-10 ">
             <ul className="flex space-x-6 items-center ">
               {/* number */}
               <li className="header-nav__title">
@@ -66,12 +66,15 @@ export default class Header extends Component {
 
           {/* =============================== */}
           {/* container of logo search box and shoplist icon */}
-          <div className="flex flex-col items-center h-[80%] space-y-4 space-x-6 md:flex-row md:justify-between px-6">
+          <div className="flex flex-col items-center
+          space-y-4
+          sm:space-x-4
+           h-[80%] md:flex-row md:justify-between px-4 sm:px-10">
             {/* header logo */}
-            <div className="mt-8 md:mt-3 md:w-1/3">
+            <div className="mt-8 md:mt-3  md:w-1/3">
               <img
                 src="./image/header/logo.png.webp"
-                className="mx-auto"
+                className=""
                 alt="header-logo"
               />
             </div>
@@ -106,7 +109,7 @@ export default class Header extends Component {
             </form>
             {/* =========================== */}
             {/* cart icons */}
-            <div className=" md:w-2/5 text-white text-sm flex space-x-4 ">
+            <div className=" md:w-2/5 text-white text-sm flex justify-end space-x-4 ">
               <a
                 href="h#"
                 className="flex flex-col  space-y-1 w-24 group items-center bg-white/10 hover:bg-white/20 p-1 rounded duration-150"
