@@ -1,0 +1,18 @@
+.box:hover .item-cart {
+bottom:-68px;
+opacity:1;
+
+}
+.item-cart:hover{
+    bottom:-68px;
+    opacity:1;
+}
+.btn-red:hover .cart-icon{
+opacity: 1;
+left:45px;
+}
+
+.btn-red:hover{
+padding-left: 10%;
+padding-right: 24%;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Collection.css"
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function collection() {
