@@ -3,7 +3,7 @@ import "./slider.css";
 
 export default function Slider(props) {
   return (
-    <section className="sm:py-10 sm:px-10 ">
+    <section className="  sm:py-10 sm:px-10 ">
       {/* title contaienr */}
       <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:justify-between">
         <h1 className="text-4xl text-stone-900 font-bold">{props.title} </h1>
@@ -23,7 +23,7 @@ export default function Slider(props) {
           </li>
         </ul>
       </div>
-      <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-auto mt-4 sm:gap-4 space-y-4 px-4">
+      <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-auto mt-4 gap-y-20  sm:gap-x-6 sm:gap-y-8 px-4">
         {props.children}
       </div>
     </section>

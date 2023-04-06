@@ -8,8 +8,8 @@ export default class PBox extends Component {
 
   render() {
     return (
-      <article className="box z-20">
-      <div className=" mx-auto w-[80%] sm:w-full text-center p-2 items-center border bg-white  hover:border-red-600 duration-200 hover:shadow-xl relative group/item h-[90%]  ">
+      <article className="box z-20 ">
+      <div className=" mx-auto w-[80%] sm:w-full text-center p-2 items-center border bg-white min-h-[60vh] sm:min-h-[50vh]  hover:border-red-600 duration-200 hover:shadow-xl relative group/item h-[90%]  ">
         {/* product img */}
         <a href="h#" className="h-[60%] block">
           <img
