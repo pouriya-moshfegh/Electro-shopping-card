@@ -9,10 +9,14 @@ opacity:1;
 }
 .btn-red:hover .cart-icon{
 opacity: 1;
-left:45px;
+left:40px;
 }
 
 .btn-red:hover{
 padding-left: 10%;
-padding-right: 24%;
+padding-right: 10%;
+}
+.cart-title{
+width:100px;
+transform:translate(-50%,-90%)
 }

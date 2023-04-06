@@ -68,7 +68,7 @@ export default class PBox extends Component {
             console.log(e.target.parentElement.dataset)
           }}
            className="btn-red" data-id={this.props.id}>
-           <ImCart className="cart-icon opacity-0 mb-[5px]"/> <div className="full inline-block"> Add to cart</div>
+           <ImCart className="cart-icon opacity-0 mb-[5px]"/> <div className="cart-title absolute inline-block"> Add to cart</div>
           </button>
         </div>
       </div>

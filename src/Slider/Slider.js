@@ -23,7 +23,7 @@ export default function Slider(props) {
           </li>
         </ul>
       </div>
-      <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-auto mt-4 gap-y-20  sm:gap-x-6 sm:gap-y-8 px-4">
+      <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-auto mt-4 gap-y-20  sm:gap-x-6 sm:gap-y-14 px-4">
         {props.children}
       </div>
     </section>
