@@ -17,6 +17,7 @@ padding-left: 10%;
 padding-right: 10%;
 }
 .cart-title{
-width:100px;
-transform:translate(-50%,-90%)
+height:100%;
+width:100%;
+transform:translate(-53%,-80%)
 }

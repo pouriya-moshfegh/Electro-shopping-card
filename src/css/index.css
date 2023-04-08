@@ -14,20 +14,19 @@
     @apply h-full w-full flex flex-col justify-end md:items-start space-y-4 lg:space-y-7;
   }
   /* img */
-
   .img-style {
-    @apply min-w-[70%]  bg-slate-200 shadow-2xl md:min-w-full  mx-auto hover:scale-105 duration-200;
+    @apply min-w-[70%] bg-slate-200 shadow-2xl md:min-w-full  mx-auto hover:scale-105 duration-200;
   }
   /* filter */
   .dark-filter {
     @apply hover:backdrop-brightness-50 h-full w-full p-6 duration-300;
   }
   .skewbg {
-    @apply skew-x-[-20deg]  h-full w-[80%] md:w-[100%] lg:w-[80%] relative right-14 md:right-14 px-10 md:px-4 py-3;
+    @apply skew-x-[-20deg] h-full w-[80%] md:w-[100%] lg:w-[80%] relative right-14 md:right-14 px-10 md:px-4 py-3;
   }
   /* btn */
   .btnShop {
-    @apply text-lg font-semibold bg-white/90 rounded-2xl py-1 px-4 hover:bg-white/70 hover:text-red-700 duration-200 absolute right-0  text-red-700/80;
+    @apply text-lg font-semibold bg-white/90 rounded-2xl py-1 px-4 hover:bg-white/70 hover:text-red-700 duration-200 absolute right-0  text-red-700/80 min-w-[120px];
   }
   .btn-red{
   @apply
@@ -42,7 +41,7 @@
     @apply absolute bg-slate-900/90  top-[-50px] w-24 left-[-34px] opacity-0 group-hover:opacity-100 group-hover:top-[-43px] duration-300 rounded-xl text-white text-[14px] py-[5px] px-[1px];
   }
   .icon-hover {
-    @apply  inline-block p-1 duration-100 rounded-full  hover:text-red-600 hover:bg-black/20;
+    @apply  inline-block p-1 duration-100 rounded-full hover:text-red-600 hover:bg-black/20;
   }
 }
 
@@ -54,8 +53,6 @@
     font-size: 80%;
   }
 }
-
-
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,

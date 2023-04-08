@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import PBox from "../ProductBox/PBox";
+import Modal from "../Modal/Modal";
 import Slider from "../Slider/Slider";
 
 export default class Products extends Component {
   constructor() {
     super();
+    this.onClickAdd = this.onClickAdd.bind(this);
+    this.onClickLike = this.onClickLike.bind(this);
     this.state = {
+      cart: [],
+      wishList: [],
       product: [
         {
           id: 1,
@@ -94,23 +99,41 @@ export default class Products extends Component {
       ],
     };
   }
+  // add to cart
+  onClickAdd(productId) {
+    let clickedItem = this.state.product.find((item) => item.id === productId);
+    this.setState((prevState) => {
+      return { cart: [...prevState.cart, clickedItem] };
+    });
+  }
+  // wishlist
+  onClickLike(productId) {
+    let clickedItem = this.state.product.find((item) => item.id === productId);
+
+    !this.state.wishList.find(item => item.id === productId) &&
+      this.setState(prevState => {
+        return { wishList: [...prevState.wishList, clickedItem] };
+      });
+  }
 
   render() {
     return (
-      <Slider title="New Products">
+      <>
+        <Modal/>
+        <Slider title="New Products">
         {this.state.product.map((item) => {
           return (
             <PBox
               key={item.id}
-              name={item.name}
-              category={item.category}
-              img={item.img}
-              price={item.price}
-              id={item.id}
+              {...item}
+              onClickAdd={this.onClickAdd}
+              onClickLike={this.onClickLike}
             ></PBox>
           );
         })}
       </Slider>
+      </>
+   
     );
   }
 }

@@ -1,12 +1,14 @@
 import React from "react";
 import "./slider.css";
 
-export default function Slider(props) {
+export default class  Slider extends React.Component {
+
+  render(){
   return (
     <section className="  sm:py-10 sm:px-10 ">
       {/* title contaienr */}
       <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:justify-between">
-        <h1 className="text-4xl text-stone-900 font-bold">{props.title} </h1>
+        <h1 className="text-4xl text-stone-900 font-bold">{this.props.title} </h1>
         {/* nav */}
         <ul className="flex space-x-4 font-bold text-stone-700">
           <li className="nav-item text-red-600 after:w-full">
@@ -23,19 +25,11 @@ export default function Slider(props) {
           </li>
         </ul>
       </div>
-      <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-auto mt-4 gap-y-20  sm:gap-x-6 sm:gap-y-14 px-4">
-        {props.children}
+      <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-auto mt-4 gap-y-20  sm:gap-x-6 sm:gap-y-14 px
+      -4">
+        {this.props.children}
       </div>
-    </section>
-  );
-}
-//1000-1250
-//780-950
 
-// {/* red beats */}
-//     {/* <div className="">red Beats by Dr. Dre wireless headphones, Headphones Beats Electronics Microphone Sound Disc jockey, Headphone, electronics, recording Studio, musician png</div>
-//     {/* black sony
-//     <div className="">Microphone Noise-cancelling headphones Bluetooth Headset, Sony Headphones, industrial, bluetooth, stereophonic Sound png</div>
-//     {/* blue beats *
-//     <div className="">blue Beats by Dr. Dre Beats Studio, Noise-cancelling headphones Beats Electronics Wireless Bluetooth, Headphone, blue, electronics, product png</div>
-//     Slider */}
+    </section>
+  );}
+}

@@ -10,7 +10,7 @@ export default function collection() {
         <div className="img-style w-full collection__p1  relative">
           <div className="skewbg">
             <div className="skew-x-[20deg] text-center space-y-8">
-              <h1 className="text-xl mdtext-xl md:text-3xl l font-bold mb-6 ">Headphone Collection</h1>
+              <h1 className="text-xl mdtext-xl md:text-3xl l font-bold mb-6 min-w-[200px]">Headphone Collection</h1>
               <a
                 href="h#"
                 className="btnShop"
@@ -26,7 +26,7 @@ export default function collection() {
 
           <div className="skewbg bg-red-600/20 ">
             <div className="skew-x-[20deg] text-center space-y-8">
-              <h1 className="text-xl md:text-3xl  font-bold mb-6 ">Camera Collection</h1>
+              <h1 className="text-xl md:text-3xl  font-bold mb-6 min-w-[200px]">Camera Collection</h1>
               <a
                 href="h#"
                 className="btnShop"
@@ -42,7 +42,7 @@ export default function collection() {
 
           <div className="skewbg">
             <div className="skew-x-[20deg] text-center space-y-8">
-              <h1 className="text-xl md:text-3xl  font-bold mb-6 ">Laptop Collection</h1>
+              <h1 className="text-xl md:text-3xl  font-bold mb-6 min-w-[200px]">Laptop Collection</h1>
               <a
                 href="h#"
                 className="btnShop"
