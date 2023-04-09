@@ -7,28 +7,17 @@ import "./PBox.css";
 export default class PBox extends Component {
 
 
-  constructor(){
-    super();
-    this.state={
-      cart:[],
-    };
-  }
     btnClickHandler(id){
       this.props.onClickAdd(id)
     }
     btnLikeClickHandler(id){
       this.props.onClickLike(id)
-
     }
 
   render() {
     let {img,category,name,price,id} =this.props
     return (
-      <article className="box z-20 ">
-        {/* {  console.log(this.state.cart)} */}
-        {/* {console.log([...this.state.cart])} */}
-
-
+      <article className="box z-20 select-none">
       <div className=" mx-auto w-[80%] sm:w-full text-center p-2 items-center border bg-white min-h-[60vh] sm:min-h-[50vh]  hover:border-red-600 duration-200 hover:shadow-xl relative group/item h-[90%]  ">
         {/* product img */}
         <a href="h#" className="h-[60%] block">
@@ -84,7 +73,7 @@ export default class PBox extends Component {
         {/* ============================= */}
         {/* add to cart */}
         <div className="item-cart w-full absolute opacity-0 duration-300 bottom-2 left-0 item:bg-white bg-slate-900 h-16 z-[-1] px-6 py-4 ">
-          <button onClick={this.btnLikeClickHandler.bind(this,id)}
+          <button onClick={this.btnClickHandler.bind(this,id)}
            className="btn-red" data-id={id}>
            <ImCart className="cart-icon opacity-0 mb-[5px]"/> <div className="cart-title absolute inline-block"> Add to cart</div>
           </button>

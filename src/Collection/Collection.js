@@ -5,7 +5,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 export default function collection() {
   return (
     <section>
-      <div className="grid grid-cols-1  md:grid-cols-3 gap-4 py-10 px-4 sm:px-10 h-[90vh] md:h-[50vh]  text-black/80">
+      <div className="grid grid-cols-1  md:grid-cols-3 gap-4 py-10 px-4 sm:px-10 h-[90vh] md:h-[50vh]  text-black/80 select-none">
         {/* p 1 */}
         <div className="img-style w-full collection__p1  relative">
           <div className="skewbg">

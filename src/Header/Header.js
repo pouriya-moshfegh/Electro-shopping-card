@@ -1,9 +1,7 @@
 import { React, Component } from "react";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import { FaLocationArrow } from "react-icons/fa";
-import { BsFillPersonFill, BsFillHeartFill } from "react-icons/bs";
-import { BiMenu } from "react-icons/bi";
-import { ImCart } from "react-icons/im";
+import { BsFillPersonFill, } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 
 export default class Header extends Component {
@@ -18,7 +16,7 @@ export default class Header extends Component {
   render() {
     return (
       <>
-        <header className="bg-[#15161D] pb-4 ">
+        <header className="bg-[#15161D] pb-4 select-none ">
           {/* ==============    header nav   ================ */}
           <div className="flex justify-between bg-white/10 px-4  py-2 sm:px-10 ">
             <ul className="flex space-x-6 items-center ">
@@ -61,7 +59,7 @@ export default class Header extends Component {
               </li>
             </ul>
             {/* nav logo */}
-            <BiMenu className="md:hidden text-3xl text-white/90 relative bottom-[1px] hover:bg-slate-100/20 cursor-pointer duration-200 rounded-xl" />
+         
           </div>
 
           {/* =============================== */}
@@ -109,32 +107,12 @@ export default class Header extends Component {
             </form>
             {/* =========================== */}
             {/* cart icons */}
-            <div className=" md:w-2/5 text-white text-sm flex justify-end space-x-4 ">
-              <a
-                href="h#"
-                className="flex flex-col  space-y-1 w-24 group items-center bg-white/10 hover:bg-white/20 p-1 rounded duration-150"
-              >
-                <span></span>
-                <BsFillHeartFill className="text-red-600 group-hover:scale-110 text-lg duration-150" />
-                Your wishlist
-              </a>
-              <a
-                href="h#"
-                className="flex flex-col space-y-1 w-24 group  items-center bg-white/10 relative hover:bg-white/20 p-1 rounded duration-150"
-              >
-                {!this.state.shopingCart.length && <span></span>}
-                {this.state.shopingCart.length > 0 && (
-                  <span className="absolute w-4 h-4 top-[1px] right-[22px] flex-center rounded-full bg-white/10 text-[13px] text-slate-300 font-semibold">
-                    {this.state.shopingCart.length}
-                  </span>
-                )}
-                <ImCart className="text-slate-300 group-hover:scale-110  duration-150 text-lg" />
-                Your cart
-              </a>
-            </div>
+            <div className="w-2/5"></div>
           </div>
         </header>
+
       </>
+
     );
   }
 }
