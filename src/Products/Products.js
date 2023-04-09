@@ -10,9 +10,11 @@ export default class Products extends Component {
     this.onClickAdd = this.onClickAdd.bind(this);
     this.onClickLike = this.onClickLike.bind(this);
     this.onClickRemove = this.onClickRemove.bind(this);
-    this.changerDisplay = this.changerDisplay.bind(this);
+    this.flexDisplay = this.flexDisplay.bind(this);
+    this.hiddenDisplay = this.hiddenDisplay.bind(this);
+    this.countTotalPrice = this.countTotalPrice.bind(this);
     this.state = {
-      modalMode:"hidden",
+      modalMode: "hidden",
       cart: [],
       wishList: [],
       totalPrice: 0,
@@ -23,7 +25,7 @@ export default class Products extends Component {
           category: "camera",
           price: 867,
           img: "./image/items/camera-1.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 2,
@@ -31,7 +33,7 @@ export default class Products extends Component {
           category: "camera",
           price: 827,
           img: "./image/items/camera-2.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 3,
@@ -39,7 +41,7 @@ export default class Products extends Component {
           category: "camera",
           price: 842,
           img: "./image/items/camera-3.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 4,
@@ -47,7 +49,7 @@ export default class Products extends Component {
           category: "camera",
           price: 789,
           img: "./image/items/camera-4.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 5,
@@ -55,7 +57,7 @@ export default class Products extends Component {
           category: "headphone",
           price: 773,
           img: "./image/items/headphone-1.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 6,
@@ -63,7 +65,7 @@ export default class Products extends Component {
           category: "headphone",
           price: 723,
           img: "./image/items/headphone-2.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 7,
@@ -71,7 +73,7 @@ export default class Products extends Component {
           category: "headphone",
           price: 791,
           img: "./image/items/headphone-3.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 8,
@@ -79,7 +81,7 @@ export default class Products extends Component {
           category: "headphone",
           price: 675,
           img: "./image/items/headphone-4.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 9,
@@ -87,7 +89,7 @@ export default class Products extends Component {
           category: "laptop",
           price: 675,
           img: "./image/items/laptop-1.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 10,
@@ -95,7 +97,7 @@ export default class Products extends Component {
           category: "laptop",
           price: 925,
           img: "./image/items/laptop-2.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 11,
@@ -103,7 +105,7 @@ export default class Products extends Component {
           category: "laptop",
           price: 815,
           img: "./image/items/laptop-3.png",
-          quantity:1,
+          quantity: 1,
         },
         {
           id: 12,
@@ -111,25 +113,36 @@ export default class Products extends Component {
           category: "laptop",
           price: 975,
           img: "./image/items/laptop-4.png",
-          quantity:1,
+          quantity: 1,
         },
       ],
     };
   }
-// Add items to cart 
+  // =================================
+  // Add items to cart
   onClickAdd(productId) {
-    let clickedItem = this.state.product.find(item => item.id === productId);
-    let itemInCart = this.state.cart.find(item => item.id === productId);
+    let clickedItem = this.state.product.find((item) => item.id === productId);
+    let itemInCart = this.state.cart.find((item) => item.id === productId);
 
     if (!itemInCart) {
-      this.setState((prevState) =>
-       { return { cart: [...prevState.cart, clickedItem] };});
-    } 
-    else {
-
-      
+      this.setState((prevState) => {
+        return { cart: [...prevState.cart, clickedItem] };
+      });
+    } else {
     }
   }
+  // =================================
+  // count totalprice
+  countTotalPrice(){
+    let finalPrice;
+    if (this.state.cart.length) {
+      finalPrice = this.state.cart.reduce((acc, obj) => {
+        return acc + obj.price;
+      }, 0);
+    }
+    this.setState({ totalPrice: finalPrice });
+  }
+
   // wishlist
   onClickLike(productId) {
     let clickedItem = this.state.product.find((item) => item.id === productId);
@@ -139,30 +152,49 @@ export default class Products extends Component {
         return { wishList: [...prevState.wishList, clickedItem] };
       });
   }
+  // =================================
+
   // remove item from cart
   onClickRemove(productId) {
     let removedItems = this.state.cart.filter((item) => item.id !== productId);
     this.setState({ cart: removedItems });
   }
-  changerDisplay(){
-    this.setState({mode:"flex"})
+  // =================================
+
+  // open Modal
+  flexDisplay() {
+    this.setState({ modalMode: "flex" });
+  }
+  // close modal
+  hiddenDisplay() {
+    this.setState({ modalMode: "hidden" });
   }
 
   render() {
     return (
       <>
-        <ShopBtn 
-         display="sticky" 
-         modalOpen="name"
-         cart={this.state.cart} />
+        {/* =============================== */}
+
+        <ShopBtn
+          display="sticky"
+          modalOpen={this.flexDisplay}
+          cart={this.state.cart}
+        />
+        {/* =============================== */}
+
         <Modal
           title="Your shopping cart"
           display={this.state.modalMode}
           inCart={this.state.cart}
           {...this.state.cart}
+          totalPrice={this.state.totalPrice}
+          closeModal={this.hiddenDisplay}
           onClickRm={this.onClickRemove}
+          countTotalPrice={this.countTotalPrice}
         />
-      {/* slider */}
+        {/* =============================== */}
+
+        {/* slider */}
         <Slider title="New Products">
           {this.state.product.map((item) => {
             return (
@@ -174,22 +206,13 @@ export default class Products extends Component {
               ></PBox>
             );
           })}
+          {/* =============================== */}
+
           {/* total price count */}
-          <button
-            onClick={() => {
-              let finalPrice;
-              if (this.state.cart.length) {
-                finalPrice = this.state.cart.reduce((acc, obj) => {
-                  return acc + obj.price;
-                }, 0);
-              }
-              this.setState({ totalPrice: finalPrice });
-            }}
-          >
-            Count
-          </button>
+    
           <span> {this.state.totalPrice || 0}</span>
         </Slider>
+        {/* =============================== */}
       </>
     );
   }

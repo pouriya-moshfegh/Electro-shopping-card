@@ -5,7 +5,7 @@ export default class  Slider extends React.Component {
 
   render(){
   return (
-    <section className="  sm:py-10 sm:px-10 ">
+    <section className="  sm:py-10 sm:px-10 select-none ">
       {/* title contaienr */}
       <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:justify-between">
         <h1 className="text-4xl text-stone-900 font-bold">{this.props.title} </h1>
