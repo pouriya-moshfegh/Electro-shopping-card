@@ -18,9 +18,9 @@ export default class PBox extends Component {
     let {img,category,name,price,id} =this.props
     return (
       <article className="box z-20 select-none">
-      <div className=" mx-auto w-[80%] sm:w-full text-center p-2 items-center border bg-white min-h-[60vh] sm:min-h-[50vh]  hover:border-red-600 duration-200 hover:shadow-xl relative group/item h-[90%]  ">
+      <div className=" mx-auto w-[80%] sm:w-full text-center p-2 flex flex-col  justify-between  border bg-white max-h-[60vh] lg:max-h-[70vh]  hover:border-red-600 duration-200 hover:shadow-xl relative group/item h-full  ">
         {/* product img */}
-        <a href="h#" className="h-[60%] block">
+        <a href="h#" className="h-[50%] block">
           <img
 
         src={ img || "./image/items/camera-1.png"}
@@ -30,7 +30,8 @@ export default class PBox extends Component {
         </a>
         {/* ============================= */}
         {/* product details */}
-        <a href="h#" className=" text-black/50 text-sm mt-2 uppercase">
+       <div className="">
+       <a href="h#" className=" text-black/50 text-sm mt-2 uppercase">
           {category || "Category"}
         </a>
         <div className="text-black/80 text-xl uppercase">
@@ -44,10 +45,11 @@ export default class PBox extends Component {
         <span className="inline-block text-black/60 line-through  text-lg ml-[5px]">
           $1000
         </span>
-        <hr className="mt-2" />
+       </div>
+
         {/* ============================= */}
         {/* icons */}
-        <div className="flex h-16 justify-center items-center space-x-3  text-xl z-10">
+        <div className="flex border-t  justify-center items-center space-x-3  text-xl z-10">
           {/* compare */}
           <div className=" relative ">
             <a href="h#" className=" icon-hover group">

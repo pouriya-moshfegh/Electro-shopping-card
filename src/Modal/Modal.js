@@ -2,11 +2,12 @@ import React from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 export default class Modal extends React.Component {
+
   remover(id) {
     this.props.onClickRm(id);
   }
-
-  render() {
+    render() {
+    
     return (
       // container of page
       <div
@@ -21,7 +22,7 @@ export default class Modal extends React.Component {
             onClick={() => {
               this.props.closeModal();
             }}
-            className="absolute right-5 top-2 text-4xl text-red-400 hover:text-red-600 duration-200 cursor-pointer"
+            className="absolute right-5 top-2 text-4xl text-white hover:text-red-600 duration-200 cursor-pointer"
           />
           {/* ===================================== */}
 
@@ -68,10 +69,10 @@ export default class Modal extends React.Component {
           <div className="mt-auto w-full h-16 flex justify-between">
             <button
             onClick={()=>this.props.countTotalPrice()}
-             className="bg-blue-400/70 hover:bg-blue-500 w-1/2 duration-150 text-black text-center py-4 text-xl">
-              {this.props.totalPrice || "Count total price"}
+             className="bg-white/10 hover:bg-blue-500/10 w-3/4 duration-150 text-white text-center py-4 text-xl">
+           Total price :    {this.props.totalPrice || 0}
                </button>
-            <button className="w-1/2 bg-red-400/80 hover:bg-red-500 duration-150 text-black text-center py-4 text-xl">Clear cart</button>
+            <button className="w-1/4 bg-red-400/80 hover:bg-red-500 duration-150 text-black text-center py-4 text-xl">Clear cart</button>
           </div>
         </div>
       </div>

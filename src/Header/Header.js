@@ -57,9 +57,7 @@ export default class Header extends Component {
                   My Account
                 </a>
               </li>
-            </ul>
-            {/* nav logo */}
-         
+            </ul>         
           </div>
 
           {/* =============================== */}
@@ -99,9 +97,9 @@ export default class Header extends Component {
               {/* submit */}
               <button
                 type="submit"
-                className="bg-red-600  w-1/5 p-1 rounded-r-full text-white hover:bg-red-700 duration-200"
+                className="bg-red-600  w-1/5 p-1 rounded-r-full text-white text-center hover:bg-red-700 duration-200"
               >
-                <CiSearch className=" text-xl hidden lg:inline lg:text-lg" />
+                <CiSearch className=" text-xl hidden lg:inline lg:text-2xl" />
                 search
               </button>
             </form>

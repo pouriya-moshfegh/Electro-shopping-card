@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Frank Ruhl Libre", "sans-serif"],
+        sans: [ "Hina Mincho" , "Frank Ruhl Libre"],
       },
     },
   },

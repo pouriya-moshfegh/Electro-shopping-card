@@ -1,7 +1,12 @@
 .box:hover .item-cart {
 bottom:-58px;
 opacity:1;
+}
+@media only screen and (max-width: 400px;){
 
+.box:hover .item-cart {
+    bottom:0px;
+}
 }
 .item-cart:hover{
     bottom:-68px;
