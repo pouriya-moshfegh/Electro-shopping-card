@@ -17,10 +17,10 @@ export default class PBox extends Component {
   render() {
     let {img,category,name,price,id} =this.props
     return (
-      <article className="box z-20 select-none">
+      <article className="box z-20 select-none mt-20 sm:mt-10">
       <div className=" mx-auto w-[80%] sm:w-full text-center p-2 flex flex-col  justify-between  border bg-white max-h-[60vh] lg:max-h-[70vh]  hover:border-red-600 duration-200 hover:shadow-xl relative group/item h-full  ">
         {/* product img */}
-        <a href="h#" className="h-[50%] block">
+        <a href="h#" className="h-[50%] min-h-[40vh] block">
           <img
 
         src={ img || "./image/items/camera-1.png"}
@@ -74,7 +74,7 @@ export default class PBox extends Component {
         </div>
         {/* ============================= */}
         {/* add to cart */}
-        <div className="item-cart w-full absolute opacity-0 duration-300 bottom-2 left-0 item:bg-white bg-slate-900 h-16 z-[-1] px-6 py-4 ">
+        <div className="item-cart w-full absolute opacity-0 duration-300 bottom-2 left-0 item:bg-white bg-slate-900 h-20 grid place-items-center px-4 z-[-1] ">
           <button onClick={this.btnClickHandler.bind(this,id)}
            className="btn-red" data-id={id}>
            <ImCart className="cart-icon opacity-0 mb-[5px]"/> <div className="cart-title absolute inline-block"> Add to cart</div>

@@ -1,21 +1,9 @@
-
-import Header from "./Header/Header"
-import Nav from "./Nav/Nav";
-import Collection from "./Collection/Collection";
-import Products from "./Products/Products"
-import ShopBtn from "./shopBtn/ShopBtn";
-
+import Mainpage from "./Mainpage";
+import { useRoutes } from "react-router-dom";
 
 function App() {
-  return (
-    < >
-<Header>
-</Header>
-<Nav></Nav>
-<Collection></Collection>
-<Products></Products> 
-    </>
-  );
+  let routes = useRoutes([{ path: "/", element: <Mainpage /> }]);
+  return <>{routes}</>;
 }
 
 export default App;

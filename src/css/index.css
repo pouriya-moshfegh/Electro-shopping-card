@@ -16,7 +16,7 @@
   /* img */
   .img-style {
     @apply  
-    shadow-2xl md:min-w-full mx-auto hover:scale-105 duration-200;
+    shadow-lg md:min-w-full mx-auto hover:scale-105 duration-200;
   }
   /* filter */
   .dark-filter {

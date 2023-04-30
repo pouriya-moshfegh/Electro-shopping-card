@@ -1,4 +1,5 @@
 import { React, Component } from "react";
+import { Link } from "react-router-dom";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 import { FaLocationArrow } from "react-icons/fa";
 import { BsFillPersonFill, } from "react-icons/bs";
@@ -49,14 +50,14 @@ export default class Header extends Component {
                 </a>
               </li>
               {/* Account */}
-              <li className="header-nav__title">
+              <Link to="/login" className="header-nav__title">
                 <a href="h#">
                   <BsFillPersonFill className="inline mx-[2px] text-[23px] md:text-lg mb-[1px] text-red-700 hover:scale-110 duration-200" />
                 </a>
-                <a href="h#" className="hidden md:inline-block">
+                <a href="/login" className="hidden md:inline-block">
                   My Account
                 </a>
-              </li>
+              </Link>
             </ul>         
           </div>
 

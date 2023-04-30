@@ -63,7 +63,7 @@ export default class Nav extends React.Component {
 
           {/* hambergur menu */}
           <div
-            className={`md:hidden ${this.state.display} right-0 top-0 h-screen w-screen  backdrop-blur-[1px] z-30 `}
+            className={`md:hidden ${this.state.display} right-0 top-0 h-screen w-screen  backdrop-blur-[1px] z-40 `}
           >
             <ul className="fixed right-0 top-0 h-screen  w-1/3 bg-[#15161dfa] flex flex-col space-y-5 items-center py-5 text-white font-bold">
               <li className="text-3xl">Menu</li>

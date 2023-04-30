@@ -7,7 +7,7 @@ export default function collection() {
     <section>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4 px-4 sm:px-10 h-[50vh]  text-white select-none">
         {/* p 1 */}
-        <div className="img-style collection__p1 w-full">
+        <div className="img-style collection__p1 rounded-t-lg md:rounded-t-none md:rounded-l-xl  w-full">
           <div className="skewbg ">
             <div className="skew-x-[20deg] text-center space-y-8">
               <h1 className="text-xl md:text-2xl text-justify lg:text-3xl  mb-6  min-w-[300px]">
@@ -40,7 +40,7 @@ export default function collection() {
           </div>
         </div>
         {/* p3 */}
-        <div className="img-style w-full collection__p3 relative">
+        <div className="img-style w-full collection__p3 relative  rounded-b-lg md:rounded-b-none md:rounded-r-xl ">
           <div className="skewbg">
             <div className="skew-x-[20deg] text-center space-y-8">
               <h1 className="text-xl md:text-2xl lg:text-3xl mb-6 lg:min-w-[350px] min-w-[200px] text-justify">
